@@ -14,16 +14,16 @@ export const GlobalContext = ({ children }) => {
     const paths = split(location.pathname, '/');
     const [lastOpenedLink, setLastOpenedLink] = useState(0)
     const sidebarMenu = [
-        { blank: false, title: 'Dashboard', path: '/dashboard', icon: <RxDashboard /> },
-        {
-            blank: false, title: 'Catalog', path: '/catalog', icon: <AiOutlineUnorderedList />,
-            subMenu: [
-                { title: 'Products', 'path': '/catalog/products' },
-                { title: 'Categories', 'path': '/catalog/categories' },
-                { title: 'Attiributes', 'path': '/catalog/attiributes' },
-                { title: 'Coupons', 'path': '/catalog/coupons' },
-            ]
-        },
+        // { blank: false, title: 'Dashboard', path: '/dashboard', icon: <RxDashboard /> },
+        // {
+        //     blank: false, title: 'Catalog', path: '/catalog', icon: <AiOutlineUnorderedList />,
+        //     subMenu: [
+        //         { title: 'Products', 'path': '/catalog/products' },
+        //         { title: 'Categories', 'path': '/catalog/categories' },
+        //         { title: 'Attiributes', 'path': '/catalog/attiributes' },
+        //         { title: 'Coupons', 'path': '/catalog/coupons' },
+        //     ]
+        // },
         {
             blank: false, title: 'Customers', path: '/customers', icon: <svg width="1em" height="1em" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_582_418)">
