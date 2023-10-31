@@ -1,0 +1,24 @@
+.sidebarMenuItem {
+    @apply text-DarkGray flex items-center md:text-lg lg:text-xl duration-300;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: 0;
+        @apply bg-Green rounded-tr-full rounded-br-full translate-x-[-100%] translate-y-[25%] duration-300 w-1 lg:w-[6px] h-[40px] md:h-[50px];
+
+
+    }
+
+    &.active {
+        @apply text-Green;
+
+        &::before {
+            @apply translate-x-0 translate-y-[30%] ;
+
+        }
+    }
+
+}
