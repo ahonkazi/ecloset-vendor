@@ -27,6 +27,31 @@
     }
 }
 
+.sidebarMenuCatalog {
+    position: relative;
+    display: block;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @apply bg-Green rounded-tr-full rounded-br-full -translate-y-[50%] translate-x-[-100%] duration-300 w-1 lg:w-[6px] h-full;
+
+
+    }
+
+    &.active {
+
+
+        &::before {
+            @apply translate-x-0 -translate-y-[50%];
+
+        }
+    }
+}
+
 .sidebarMenuItem {
     @apply text-DarkGray flex items-center md:text-lg lg:text-xl duration-300 py-1 md:py-1.5;
 

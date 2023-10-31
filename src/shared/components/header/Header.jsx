@@ -9,13 +9,6 @@ const Header = () => {
     const globalContext = useContext(GetGlobalContext);
     const toggleButton = () => {
         globalContext.setSidebarStatus(!globalContext.sidebarStatus)
-        if (globalContext.sidebarStatus === false) {
-            globalContext.setActiveMenuItem(globalContext.lastOpenedLink);
-        } else {
-            globalContext.setActiveMenuItem(true);
-
-        }
-
     }
 
     return (
