@@ -7,13 +7,25 @@ import { BiBell } from 'react-icons/bi';
 import profilePic from '../../assets/profile.webp';
 const Header = () => {
     const globalContext = useContext(GetGlobalContext);
+    const toggleButton = () => {
+        globalContext.setSidebarStatus(!globalContext.sidebarStatus)
+        // globalContext.setActiveMenuItem(!globalContext.sidebarStatus)
+        if (globalContext.sidebarStatus === false) {
+            globalContext.setActiveMenuItem(globalContext.lastOpenedLink);
+        } else {
+            globalContext.setActiveMenuItem(true);
+
+        }
+
+    }
+
     return (
         <header className='h-[50px] xl:h-[60px] flex items-center w-full bg-white shadow-1 z-[90] fixed top-0 left-0'>
             <HeaderWrapper>
                 <div className="flex justify-between items-center">
                     <div className={`${globalContext.sidebarStatus ? 'xs:hidden md:block' : ''}`}>
 
-                        <IconButton onClick={() => globalContext.setSidebarStatus(!globalContext.sidebarStatus)}>
+                        <IconButton onClick={toggleButton}>
                             <svg width="18px" height="18px" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 1H25" stroke="black" />
                                 <path d="M0 9H25" stroke="black" />

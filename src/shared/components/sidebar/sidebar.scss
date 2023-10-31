@@ -1,23 +1,49 @@
-.sidebarMenuItem {
-    @apply text-DarkGray flex items-center md:text-lg lg:text-xl duration-300;
+.sidebarMenuLink {
     position: relative;
+    display: block;
+
 
     &::before {
         content: '';
         position: absolute;
-        top: -50%;
+        top: 50%;
         left: 0;
-        @apply bg-Green rounded-tr-full rounded-br-full translate-x-[-100%] translate-y-[25%] duration-300 w-1 lg:w-[6px] h-[40px] md:h-[50px];
+        @apply bg-Green rounded-tr-full rounded-br-full -translate-y-[50%] translate-x-[-100%] duration-300 w-1 lg:w-[6px] h-full;
 
 
     }
 
     &.active {
+        p {
+            @apply text-Green;
+        }
+
         @apply text-Green;
 
         &::before {
-            @apply translate-x-0 translate-y-[30%] ;
+            @apply translate-x-0 -translate-y-[50%];
 
+        }
+    }
+}
+
+.sidebarMenuItem {
+    @apply text-DarkGray flex items-center md:text-lg lg:text-xl duration-300 py-1 md:py-1.5;
+
+
+
+
+
+}
+
+.subMenuItem {
+    @apply flex text-DarkGray items-center gap-2;
+
+    &.active {
+        @apply text-Green;
+
+        span {
+            @apply bg-Green;
         }
     }
 

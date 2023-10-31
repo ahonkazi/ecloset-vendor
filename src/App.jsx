@@ -11,6 +11,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout><DashboardPage /></Layout >} />
       <Route path='/dashboard' element={<Layout><DashboardPage /></Layout >} />
+      <Route path='*' element={<Layout><DashboardPage /></Layout >} />
     </Routes>
   )
 }
