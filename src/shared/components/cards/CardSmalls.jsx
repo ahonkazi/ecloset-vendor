@@ -37,7 +37,7 @@ export const OverviewCardTargetSale = ({ count, title, bgColor, children, prefix
 export const MapPointDot = ({ top, left, country }) => {
     const [active, setActive] = useState(false);
     return (
-        <div onMouseLeave={() => setActive(false)} style={{ 'top': top, 'left': left }} className="point-area absolute">
+        <div onMouseLeave={() => setActive(false)} style={{ 'top': top, 'left': left }} className="select-none absolute">
             <div className="relative">
                 <div className="point ">
                     <button onMouseEnter={() => setActive(true)}>  <MapPointIcon /></button>
