@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -19,10 +20,18 @@ html {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
+.shadow-box {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.shadow-red {
+    box-shadow: rgba(222, 4, 26, 0.25) 0px 50px 100px -20px, rgba(230, 2, 2, 0.3) 0px 30px 60px -30px;
+}
 
 .main-wrapper {
     @apply px-4;
 }
-.site-container{
-    @apply px-4;
+
+.site-container {
+    @apply px-4 md:px-8;
 }

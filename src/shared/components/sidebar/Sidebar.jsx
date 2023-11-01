@@ -25,7 +25,7 @@ const Sidebar = () => {
     return (
         <aside className={`${globalContext.sidebarStatus ? 'translate-x-0  ' : '-translate-x-full '} w-full xs:w-[300px]   duration-300 overflow-hidden  h-screen  bg-white shadow-1 z-[100] fixed top-0 left-0`}>
             <div className="sidebar-header  h-[60px] flex  items-center">
-                <div className="logo flex justify-between ml-2.5 mr-5 w-full ">
+                <div className="logo flex justify-between ml-4 mr-2 w-full ">
                     <Link to={'/'} className='flex items-center h-full'>
 
                         <span className={` duration-300`}>
@@ -51,7 +51,7 @@ const Sidebar = () => {
                         <div className="sidebarMenuItemWrapper">
                             <NavLink to={'/dashboard'} className='sidebarMenuLink'>
                                 <div className="sidebarMenuItem">
-                                    <div className={`duration-300 ${globalContext.sidebarStatus ? 'w-[20px] lg:w-[40px] ' : 'w-[40px]  flex justify-center xs:justify-start lg:w-[40px]'}   shrink-0 ml-2.5 mr-5`}>
+                                    <div className={`duration-300 shrink-0 ml-4 mr-2`}>
                                         <p className="icon text-lg lg:text-2xl shadow-2 block bg-white p-2 rounded-md">
                                             <RxDashboard />
                                         </p>
@@ -66,9 +66,9 @@ const Sidebar = () => {
                     <li >
                         <div className={`sidebarMenuCatalog ${activeCatalog ? 'active' : ''}`}>
                             <div onClick={() => setCatalogStatus(!catalogStatus)} className="sidebarMenuItem cursor-pointer">
-                                <div className={`duration-300 ${globalContext.sidebarStatus ? 'w-[20px] lg:w-[40px] ' : 'w-[40px]  flex justify-center xs:justify-start lg:w-[40px]'}   shrink-0 ml-2.5 mr-5`}>
+                                <div className={`duration-300 shrink-0 ml-4 mr-2`}>
                                     <p className="icon text-lg lg:text-2xl shadow-2 block bg-white p-2 rounded-md">
-                                        <AiOutlineUnorderedList />
+                                        <AiOutlineUnorderedList className={`${activeCatalog ? 'text-Green' : ''}`} />
                                     </p>
                                 </div>
                                 <p className={`text whitespace-nowrap ${activeCatalog ? 'text-Green' : ''}`}>
@@ -118,7 +118,7 @@ const Sidebar = () => {
                                 <div className="sidebarMenuItemWrapper">
                                     <NavLink target={item.blank ? '_blank' : ''} to={item.path} className='sidebarMenuLink'>
                                         <div className="sidebarMenuItem">
-                                            <div className={`duration-300 ${globalContext.sidebarStatus ? 'w-[20px] lg:w-[40px] ' : 'w-[40px]  flex justify-center xs:justify-start lg:w-[40px]'}   shrink-0 ml-2.5 mr-5`}>
+                                            <div className={`duration-300 shrink-0 ml-4 mr-2`}>
                                                 <p className="icon text-lg lg:text-2xl shadow-2 block bg-white p-2 rounded-md">
                                                     {item.icon}
                                                 </p>
@@ -134,7 +134,7 @@ const Sidebar = () => {
                     }
                     <li>
                         <button className='sidebarMenuItem '>
-                            <div className={`duration-300 ${globalContext.sidebarStatus ? 'w-[20px] lg:w-[40px] ' : 'w-[40px]  flex justify-center xs:justify-start lg:w-[40px]'}   shrink-0 ml-2.5 mr-5`}>
+                            <div className={`duration-300 shrink-0 ml-4 mr-2`}>
                                 <p className="icon text-lg lg:text-2xl shadow-2 block bg-white p-2 rounded-md">
                                     <AiOutlineLogout />
                                 </p>

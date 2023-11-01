@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GetGlobalContext } from '../../../context/GlobalContext'
 
-export const MainWrapper = ({ children }) => {
+export const MainWrapper = ({ children, title }) => {
     const globalContext = useContext(GetGlobalContext);
     return (
 
@@ -22,6 +22,20 @@ export const HeaderWrapper = ({ children }) => {
                 {children}
             </div>
         </main>
+    )
+}
+
+
+export const PageWrapper = ({ children, title }) => {
+    return (
+        <>
+            <section className="pt-4 pb-2 lg:pb-4 xl:py-6 wrapper-header">
+                <h2 className='text-lg md:text-xl lg:text-2xl font-Literata'>{title}</h2>
+            </section>
+            {/* <div className="md:h-4"></div> */}
+            {children}
+
+        </>
     )
 }
 

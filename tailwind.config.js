@@ -36,6 +36,7 @@ export default {
         'Ubuntu': ['Ubuntu'],
         'Exo': ['Exo'],
         'Inter': ['Inter'],
+        'Domine': ['Domine'],
 
       }
 

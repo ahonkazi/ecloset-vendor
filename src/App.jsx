@@ -17,7 +17,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout><DashboardPage /></Layout >} />
       <Route path='/dashboard' element={<Layout><DashboardPage /></Layout >} />
-      <Route path='*' element={<Layout><DashboardPage /></Layout >} />
+      <Route path='*' element={<Layout title={'404'}><DashboardPage /></Layout >} />
     </Routes>
   )
 }
