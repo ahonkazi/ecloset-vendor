@@ -1,6 +1,7 @@
-import React from 'react'
-
-export const SelectField = () => {
+import { AnimatePresence, motion } from 'framer-motion'
+import React, { useState } from 'react'
+import { FiChevronRight } from 'react-icons/fi'
+export const SelectFieldYear = () => {
     return (
         <button className='flex items-center gap-2 border border-DarkGray text-DarkGray font-Roboto px-2 py-2 rounded'>
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,5 +14,37 @@ export const SelectField = () => {
                 <path d="M0.50293 1L4.00293 4L7.50293 1" stroke="#6B6B6B" stroke-linecap="round" />
             </svg></span>
         </button>
+    )
+}
+export const TextField = ({ type, variant, color, placeholder }) => {
+    return (
+        <div className="input-item ">
+            <input type={type} placeholder={placeholder} className={`${variant === 'filled' ? 'bg-WhiteShade' : 'bg-transparent'} font-WorkSans border-[0.2px] w-full py-2 px-4 text-DarkGray outline-none rounded border-[#6B6B6B]`} />
+        </div>
+    )
+}
+export const SelectField = ({ data, variant, color, placeholder }) => {
+    const [selectStatus, setSelectStatus] = useState(false);
+    const [activeData, setActiveData] = useState(placeholder)
+    return (
+        <div className="relative">
+            <button onClick={() => setSelectStatus(!selectStatus)} className={`${variant === 'filled' ? 'bg-WhiteShade' : 'bg-transparent'} flex items-center justify-between text-start font-WorkSans border-[0.2px] w-full py-2 px-4 text-DarkGray outline-none rounded border-[#6B6B6B]`}>
+                <span> {activeData}</span>
+                <span>
+                    <FiChevronRight className={`rotate-90`} />
+                </span>
+            </button>
+            <AnimatePresence>
+                {selectStatus && (
+                    <motion.div style={{ 'scrollbarWidth': 'thin' }} className='absolute top-full left-0 bg-DarkGray  mt-1 overflow-y-auto rounded w-full max-h-[200px]'>
+                        {data?.map(item =>
+                            <button onClick={() => { setSelectStatus(false); setActiveData(item) }} className='bg-GrayMid w-full text-start my-1 select-none cursor-pointer text-gray-300 font-Poppins py-1.5 px-4'>{item}</button>
+
+                        )}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div >
+
     )
 }

@@ -24,6 +24,7 @@ export default {
         'YellowDark': "#F7D334",
         'Red': '#FF2B2B',
         'BlueShade': '#EAFEFF',
+        'WhiteShade': '#F0F0F0',
       },
       screens: {
         'xs': '380px',

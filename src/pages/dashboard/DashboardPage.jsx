@@ -13,7 +13,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { SelectField } from '../../shared/components/input-fields/SelectField';
+import {  SelectFieldYear } from '../../shared/components/input-fields/SelectField';
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -45,8 +45,7 @@ const DashboardPage = () => {
                 <div className="w-full bg-white my-4 p-4">
                     <div className="chart-header flex items-center justify-between">
                         <h2 className='text-2xl font-Literata'>Monthly sales</h2>
-                        <SelectField />
-
+                        <SelectFieldYear />
                     </div>
                     <Line data={data} />
 

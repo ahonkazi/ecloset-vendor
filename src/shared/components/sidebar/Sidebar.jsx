@@ -65,7 +65,7 @@ const Sidebar = () => {
                     </li>
                     <li >
                         <div className={`sidebarMenuCatalog ${activeCatalog ? 'active' : ''}`}>
-                            <div onClick={() => setCatalogStatus(!catalogStatus)} className="sidebarMenuItem cursor-pointer">
+                            <button onClick={() => setCatalogStatus(!catalogStatus)} className="sidebarMenuItem w-full cursor-pointer">
                                 <div className={`duration-300 shrink-0 ml-4 mr-2`}>
                                     <p className="icon text-lg lg:text-2xl shadow-2 block bg-white p-2 rounded-md">
                                         <AiOutlineUnorderedList className={`${activeCatalog ? 'text-Green' : ''}`} />
@@ -74,7 +74,7 @@ const Sidebar = () => {
                                 <p className={`text whitespace-nowrap ${activeCatalog ? 'text-Green' : ''}`}>
                                     Catalog
                                 </p>
-                            </div>
+                            </button>
                             <AnimatePresence>
                                 {
                                     catalogStatus && (
