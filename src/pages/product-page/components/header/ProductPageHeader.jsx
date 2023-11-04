@@ -16,6 +16,7 @@ const ProductPageHeader = () => {
                 <ButtonAdd bg={'#034B47'}>
                     Add Product
                 </ButtonAdd>
+                
             </div>
         </section>
     )
