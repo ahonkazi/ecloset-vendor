@@ -80,6 +80,7 @@ const Sidebar = () => {
                                     catalogStatus && (
                                         <motion.div style={{ overflow: "clip" }} transition={{ duration: 0.3 }} exit={{ height: '0' }} initial={{ height: '0' }} animate={{ height: 'auto' }} >
                                             <ul className='flex flex-col pl-16'>
+
                                                 <li onClick={() => setActiveCatalog(true)} className='' >
                                                     <NavLink to='/products' className="subMenuItem">
                                                         <span className='w-1 shrink-0 h-1 rounded-full bg-DarkGray'></span>
@@ -93,7 +94,7 @@ const Sidebar = () => {
                                                     </NavLink>
                                                 </li>
                                                 <li onClick={() => setActiveCatalog(true)} className='' >
-                                                    <NavLink to='/attiributes' className="subMenuItem">
+                                                    <NavLink to='/attributes' className="subMenuItem">
                                                         <span className='w-1 shrink-0 h-1 rounded-full bg-DarkGray'></span>
                                                         <p>Attiributes</p>
                                                     </NavLink>

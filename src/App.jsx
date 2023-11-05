@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 import './App.scss'
 import Layout from './shared/layout/Layout'
 import { Route, Routes } from 'react-router-dom'
-import { DashboardPage, ProductPage } from './routes/routes'
+import { AttributePage, CategoriesPage, CouponPage, CustomerPage, DashboardPage, OrderPage, ProductPage } from './routes/routes'
 import { GetGlobalContext } from './context/GlobalContext'
 
 function App() {
@@ -18,6 +18,11 @@ function App() {
       <Route path='/' element={<Layout><DashboardPage /></Layout >} />
       <Route path='/dashboard' element={<Layout><DashboardPage /></Layout >} />
       <Route path='/products' element={<Layout><ProductPage /></Layout >} />
+      <Route path='/categories' element={<Layout><CategoriesPage /></Layout >} />
+      <Route path='/attributes' element={<Layout><AttributePage /></Layout >} />
+      <Route path='/coupons' element={<Layout><CouponPage /></Layout >} />
+      <Route path='/customers' element={<Layout><CustomerPage /></Layout >} />
+      <Route path='/orders' element={<Layout><OrderPage /></Layout >} />
       <Route path='*' element={<Layout title={'404'}><DashboardPage /></Layout >} />
     </Routes>
   )

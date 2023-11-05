@@ -11,7 +11,9 @@ const ProductPage = () => {
             <PageWrapper title={'Products'}>
                 <ProductPageHeader />
                 <ProductPageFilter />
-                <ProductTable />
+                <div className="overflow-x-auto">
+                    <ProductTable />
+                </div>
             </PageWrapper>
         </PageAnimation>
     )
