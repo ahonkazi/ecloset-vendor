@@ -4,7 +4,8 @@ import { AiOutlineDelete } from 'react-icons/ai'
 import { BsPlus } from 'react-icons/bs'
 import { ButtonAdd, ButtonDelete } from '../../../../shared/components/buttons/Button'
 
-const ProductPageHeader = () => {
+const ProductPageHeader = ({ setModal }) => {
+
     return (
         <section className='section-style flex-col flex gap-2 xs:flex-row xs:items-center xs:justify-between '>
             <div className="">
@@ -13,10 +14,14 @@ const ProductPageHeader = () => {
             <div className="flex items-center justify-between gap-4">
                 <ButtonDelete />
 
-                <ButtonAdd bg={'#034B47'}>
-                    Add Product
-                </ButtonAdd>
-                
+
+                <span onClick={() => setModal(true)}>
+                    <ButtonAdd bg={'#034B47'}>
+                        Add Product
+                    </ButtonAdd>
+                </span>
+
+
             </div>
         </section>
     )

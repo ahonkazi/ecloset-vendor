@@ -27,7 +27,7 @@ export const SelectField = ({ data, variant, color, placeholder }) => {
     const [selectStatus, setSelectStatus] = useState(false);
     const [activeData, setActiveData] = useState(placeholder)
     return (
-        <div className="relative">
+        <div className="relative w-full">
             <button onClick={() => setSelectStatus(!selectStatus)} className={`${variant === 'filled' ? 'bg-WhiteShade' : 'bg-transparent'} flex items-center justify-between text-start font-WorkSans border-[0.2px] w-full py-2 px-4 text-DarkGray outline-none rounded border-[#6B6B6B]`}>
                 <span> {activeData}</span>
                 <span>
@@ -36,7 +36,7 @@ export const SelectField = ({ data, variant, color, placeholder }) => {
             </button>
             <AnimatePresence>
                 {selectStatus && (
-                    <motion.div style={{ 'scrollbarWidth': 'thin' }} className='absolute top-full left-0 bg-DarkGray  mt-1 overflow-y-auto rounded w-full max-h-[200px]'>
+                    <motion.div style={{ 'scrollbarWidth': 'thin' }} className='z-[50] absolute top-full left-0 bg-DarkGray  mt-1 overflow-y-auto rounded w-full max-h-[200px]'>
                         {data?.map(item =>
                             <button onClick={() => { setSelectStatus(false); setActiveData(item) }} className='bg-GrayMid w-full text-start my-1 select-none cursor-pointer text-gray-300 font-Poppins py-1.5 px-4'>{item}</button>
 
