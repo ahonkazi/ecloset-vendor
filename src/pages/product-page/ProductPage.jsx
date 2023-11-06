@@ -16,16 +16,12 @@ const ProductPage = () => {
                 <PageWrapper title={'Products'}>
                     <ProductPageHeader setModal={productContext.setProductAddModalStatus} />
                     <ProductPageFilter />
-                    <div className="overflow-x-auto">
-                        <ProductTable />
-                    </div>
+                    <ProductTable />
+
                 </PageWrapper>
             </PageAnimation>
-
             {productContext.productAddModalStatus && (
-
                 <ProductAddModal />
-
             )}
 
         </>

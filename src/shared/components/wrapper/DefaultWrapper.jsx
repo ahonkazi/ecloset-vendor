@@ -13,6 +13,18 @@ export const MainWrapper = ({ children, title }) => {
     )
 }
 
+export const MainWrapperDefault = ({ children, title }) => {
+    const globalContext = useContext(GetGlobalContext);
+    return (
+
+        <main className={`pt-[50px] w-full xl:pt-[60px] duration-200 ${globalContext.sidebarStatus ? 'md:pl-[300px]' : ''}`}>
+            <div className="">
+                {children}
+            </div>
+        </main>
+    )
+}
+
 export const HeaderWrapper = ({ children }) => {
     const globalContext = useContext(GetGlobalContext);
     return (

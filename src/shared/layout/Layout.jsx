@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/header/Header'
 import Sidebar from '../components/sidebar/Sidebar'
-import { MainWrapper } from '../components/wrapper/DefaultWrapper'
+import { MainWrapper, MainWrapperDefault } from '../components/wrapper/DefaultWrapper'
 
 const Layout = ({ children }) => {
     return (
@@ -16,3 +16,15 @@ const Layout = ({ children }) => {
 }
 
 export default Layout
+
+export const LayoutDefault = ({ children }) => {
+    return (
+        <>
+            <Header />
+            <Sidebar />
+            <MainWrapperDefault>
+                {children}
+            </MainWrapperDefault>
+        </>
+    )
+}

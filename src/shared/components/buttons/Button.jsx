@@ -5,7 +5,7 @@ import { BsPlus } from 'react-icons/bs'
 
 export const ButtonDelete = () => {
     return (
-        <Button variant="contained" style={{ background: '#FF2B2B' }} startIcon={<AiOutlineDelete />}>
+        <Button fullWidth variant="contained" style={{ background: '#FF2B2B' }} startIcon={<AiOutlineDelete />}>
             Delete
         </Button>
     )
@@ -13,7 +13,7 @@ export const ButtonDelete = () => {
 
 export const ButtonAdd = ({ bg, children }) => {
     return (
-        <Button variant="contained" style={{ background: bg }} startIcon={<BsPlus />}>
+        <Button fullWidth variant="contained" style={{ background: bg }} startIcon={<BsPlus />}>
             {children}
         </Button>
     )

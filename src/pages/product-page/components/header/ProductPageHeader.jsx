@@ -7,20 +7,28 @@ import { ButtonAdd, ButtonDelete } from '../../../../shared/components/buttons/B
 const ProductPageHeader = ({ setModal }) => {
 
     return (
-        <section className='section-style flex-col flex gap-2 xs:flex-row xs:items-center xs:justify-between '>
-            <div className="">
-                <Button variant="outlined" style={{ borderColor: '#6B6B6B', color: '#6B6B6B' }}>Export</Button>
+        <section className='section-style flex-col flex gap-2 sm:flex-row sm:justify-between  '>
+            <div className="flex gap-2">
+                <div className="w-full sm:w-auto">
+                    <Button fullWidth variant="outlined" style={{ borderColor: '#6B6B6B', color: '#6B6B6B' }}>Export</Button>
+
+                </div>
+                <div className="w-full sm:w-auto">
+                    <Button fullWidth variant="contained" style={{ background: '#6B6B6B', color: '#fff' }}>Select All</Button>
+
+                </div>
             </div>
-            <div className="flex items-center justify-between gap-4">
-                <ButtonDelete />
-
-
-                <span onClick={() => setModal(true)}>
-                    <ButtonAdd bg={'#034B47'}>
-                        Add Product
-                    </ButtonAdd>
-                </span>
-
+            <div className=" grid grid-cols-2 gap-2 sm:flex">
+                <div className="">
+                    <ButtonDelete />
+                </div>
+                <div className="">
+                    <span onClick={() => setModal(true)}>
+                        <ButtonAdd bg={'#034B47'}>
+                            Add Product
+                        </ButtonAdd>
+                    </span>
+                </div>
 
             </div>
         </section>

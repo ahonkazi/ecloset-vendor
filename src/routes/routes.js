@@ -4,6 +4,7 @@ import CouponPage from "../pages/coupon-page/CouponPage";
 import CustomerPage from "../pages/customer-page/CustomerPage";
 import DashboardPage from "../pages/dashboard/DashboardPage";
 import OrderPage from "../pages/order-page/OrderPage";
+import ProductDetails from "../pages/product-details/ProductDetailsPage";
 import ProductPage from "../pages/product-page/ProductPage";
 
 export {
@@ -13,5 +14,6 @@ export {
     AttributePage,
     CouponPage,
     CustomerPage,
-    OrderPage
+    OrderPage,
+    ProductDetails
 }

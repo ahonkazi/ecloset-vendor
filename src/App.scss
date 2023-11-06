@@ -32,6 +32,10 @@ html {
     @apply px-4;
 }
 
+.edit-box {
+    @apply shadow-2 px-4 py-4 bg-white w-full h-fit rounded;
+}
+
 .site-container {
     @apply px-4 md:px-8;
 }
